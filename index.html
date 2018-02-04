@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clone nodes html</title>
+	<link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+		<br>
+		<div class="col-md-11 form-border">
+			<h1 class="text-center">Registrar Ciudadano</h1>
+			<br>
+			<!-- Datos personales-->
+			<form id="form-detenido" method="POST" enctype="multipart/form-data">
+				<div id="family">
+				<!-- Caracteristicas -->
+				<fieldset class="fieldset">
+					<legend class="legend">Caracteristicas</legend>
+					<div id="characteristics" class="container-characteristics">
+						<div class="row" id="rowC_1">
+							<div class="col-md-4">
+								<br>
+								<div class="text-left"><label>Nombre</label></div>
+								<input list="name" id="dataCha" name="caracteristicasNombre[]" class="form-control">
+								<datalist id="nameCaracteristica">
+								</datalist>
+							</div>
+							<div class="col-md-4">
+								<br>
+								<div class="text-left"><label>Descripción</label></div>
+								<textarea class="form-control" name="caracteristicasDesc[]" id="textareaCha" rows="1"></textarea>
+							</div>
+
+							<div class="col-md-4">
+								<button onclick="moreCharacteristict(rowC_1)" id="new" class="circle-more-char" type="button"> <span class="icon-plus" id="spanBut"></span></button>
+							</div>
+						</div>
+					</div>
+					<br><br>
+				</fieldset>
+				<!-- Familiar -->
+				<div id="family_1">
+					<br>
+				<fieldset class="fieldset">
+					<legend class="legend">Datos Familiar</legend>
+						<div class="container-family">
+						<div class="row">
+						<div class="col-md-4">
+							<br>
+							<div class="text-left"><label>Primer Nombre</label></div>
+							<input placeholder="Escriba Primer Nombre" type="text" name="pnombreF[]" class="form-control">
+						</div>
+						<div class="col-md-4">
+							<br>
+							<div class="text-left"><label>Segundo Nombre</label></div>
+							<input placeholder="Escriba Segundo Nombre" type="text" name="snombreF[]" class="form-control">
+						</div>
+						<div class="col-md-4">
+							<br>
+							<div class="text-left"><label>Primer Apellido</label></div>
+							<input placeholder="Escriba Primer Apellido" type="text" name="papellidoF[]" class="form-control">
+						</div>
+						<div class="col-md-4">
+							<br>
+							<div class="text-left"><label>Segundo Apellido</label></div>
+							<input placeholder="Escriba Segundo pellido" type="text" name="sapellidoF[]" class="form-control">
+						</div>
+						<div class="col-md-4">
+							<br>
+							<div class="text-left"><label>Edad</label></div>
+							<input placeholder="Edad" type="number" name="edadF[]" max="100" min="5" class="form-control">
+						</div>
+						
+						<div class="col-md-4">
+							<br>
+						<div class="text-left"><label>Parentezco</label></div>
+						<select class="form-control" name="parentezco[]">
+							<option></option>
+							<option value="Padre">Padre</option>
+							<option value="Madre">Madre</option>
+							<option value="Hijo">Hijo</option>
+							<option value="Hermano">Herman@</option>
+							<option value="Sobrino">Sobrin@</option>
+							<option value="Nieto">Niet@</option>
+							<option value="Abuelo">Abuelo</option>
+							<option value="Primo">Prim@</option>
+							<option value="Cuñan@">Cuñan@</option>
+							<option value="Yerno">Yerno</option>
+						</select>
+						</div>
+
+						<div class="col-md-4">
+							<br>
+						<div class="text-left"><label>Nacionalidad</label></div>
+						<select class="form-control" name="nacionF[]">
+							<option value="1">Venezolano</option>
+							<option value="2">Extranjero</option>
+						</select>
+						</div>
+
+						<div class="col-md-4">
+							<br>
+							<div class="text-left"><label>Identificación</label></div>
+							<input placeholder="Identificación" type="number" name="identificacion[]" class="form-control">
+						</div>
+
+						<div class="col-md-4">
+							<br>
+						<div class="text-left"><label>Sexo</label></div>
+						<select class="form-control" name="sexoF[]">
+							<option value="1">Hombre</option>
+							<option value="2">Mujer</option>
+							<option value="3">Otro</option>
+						</select>
+						</div>
+
+						<div class="col-md-4" id="new">
+						<button onclick="moreFamily(family_1)" type="button" class="circle-more-family"> <span class="icon-plus"></span></button>
+
+						</div>
+						
+				<br><br>
+					</div>
+						</div>	
+					</fieldset>
+				</div>
+				<!-- Familiar -->	
+				</div>
+				<input type="hidden" name="direccion" id="direccion" value="detenido_add">
+				
+				<button class="btn btn-login">
+						<span class="icon-floppy-disk"></span> Enviar
+				</button>
+
+				<br><br>
+			</form>
+		</div>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+.container-characteristics{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.container-characteristics{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.container-family {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.col-md-4{
+	display: inline-block;
+}
+
+.icon-minus:before {
+content: '-';
+}
+
+.circle-more-family:before, .circle-more-char:before {
+content: '+';
+}
